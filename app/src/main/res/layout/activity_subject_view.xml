@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_subject_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context="com.arunsudharsan.eecnotesforyou.SubjectViewActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- this is header non scrollable-->
+        <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+
+        card_view:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tvSubjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Subject Name"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/tvSubjectCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Code"
+
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbarSize="3.2dip"
+            android:scrollbarThumbVertical="@drawable/scrollbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- this is for Unit1-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Unit 1"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/llforu1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdf1"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View"
+
+                                    />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdf1"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llforu1T"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <Button
+                                    android:id="@+id/btn_Uploadpdf1"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <!-- this is for Unit2-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Unit 2"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/llforu2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+
+                                    android:id="@+id/btn_ViewPdf2"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdf2"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llforu2T"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <Button
+                                    android:id="@+id/btn_Uploadpdf2"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <!-- this is for Unit3-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Unit 3"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+
+                                android:id="@+id/llforu3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdf3"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdf3"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/llforu3T"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <Button
+                                    android:id="@+id/btn_Uploadpdf3"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <!-- this is for Unit4-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Unit 4"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+
+                                android:id="@+id/llforu4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdf4"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdf4"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/llforu4T"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <Button
+                                    android:id="@+id/btn_UploadPdf4"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload"
+
+                                    />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <!-- this is for Unit5-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Unit 5"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/llforu5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdf5"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdf5"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llforu5T"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <Button
+                                    android:id="@+id/btn_UploadPdf5"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <!-- this is for Impq-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="University Questions"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/llforimpq"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdfImpq"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdfImpq"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llforimpqT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <Button
+                                    android:id="@+id/btn_UploadPdfImpq"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <!-- this is for Syllabus-->
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="08dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:padding="5dp"
+                                android:text="Syllabus"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/llforSyllabus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/btn_ViewPdfS"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="View" />
+
+                                <Button
+                                    android:id="@+id/btn_DownloadPdfS"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Download" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llforSyllabusT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <Button
+                                    android:id="@+id/btn_UploadpdfSyllabus"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="1"
+                                    android:text="Upload" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

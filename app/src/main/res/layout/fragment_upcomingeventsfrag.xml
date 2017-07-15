@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arunsudharsan.eecnotesforyou.upcomingeventsfrag">
+
+
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp">
+
+    <LinearLayout
+
+        style="@style/Widget.CardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+      <TextView
+          android:id="@+id/sympnametv"
+          android:layout_width="match_parent"
+
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text="Loading..."
+          android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+      <TextView
+          android:id="@+id/symposiumcontentstv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Loading..."
+          android:textAppearance="?android:textAppearanceMedium" />
+
+
+      <Button
+          android:id="@+id/btn_registersym"
+          style="@style/Widget.AppCompat.Button.Colored"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_marginTop="12dp"
+          android:padding="0dp"
+          android:text="@string/register" />
+    </LinearLayout>
+
+  </android.support.v7.widget.CardView>
+
+</FrameLayout>

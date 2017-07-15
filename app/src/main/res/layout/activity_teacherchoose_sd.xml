@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.arunsudharsan.eecnotesforyou.TeacherchooseSD">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_teacherSD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="@color/cardviewbgcolor"
+
+
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+
+                    android:text="Select Department"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <!-- Spinner Element -->
+                <Spinner
+                    android:id="@+id/spinnerfortdpet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/spinner_title_for_dept"
+                    android:spinnerMode="dialog" />
+
+
+                <!-- Text Label -->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:text="Select Semester"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <!-- Spinner Element -->
+                <Spinner
+                    android:id="@+id/spinnerfortsem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/spinner_title_for_sem"
+                    android:spinnerMode="dialog"
+
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:gravity="center_horizontal|center_vertical"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_selectSD"
+        android:text="Go" />
+</RelativeLayout>

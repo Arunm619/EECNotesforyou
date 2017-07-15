@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">EEC - Notes</string>
+
+    <string name="title_1">EEC App</string>
+
+    <string name="internet_error">Active Internet Connection is required in order to proceed </string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="pdffilesofflinemessage">You can Save pdf files Offline!</string>
+    <string name="Saved">Saved</string>
+    <string name="gotohometext">Search</string>
+    <string name="tap_the_download_button_to_save_pdf_and_read_them_later">Tap the download button to save pdf and read them later</string>
+    <string name="you_haven_t_saved_anything_yet">You haven\'t saved anything yet</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">Hello Engineer!</string>
+    <string name="slide_1_desc">Welcome to The Notes App!</string>
+    <string name="slide_2_title">Notes for All Departments</string>
+    <string name="slide_2_desc">We provide the latest study materials.</string>
+    <string name="slide_3_title">Offline Mode</string>
+    <string name="slide_3_desc">You can download pdf for offline reading</string>
+    <string name="slide_4_title"> </string>
+    <string name="slide_4_desc">Keep Calm And Be An ENGINEER!</string>
+    <string name="select_your_dept_and_sem">Select Dept.and Sem.</string>
+
+
+    <string name="spinner_title_for_dept">Select Department</string>
+    <string name="spinner_title_for_sem">Select Semester</string>
+    <string name="symposium_name">Symposium Name</string>
+    <string name="brief_content_of_the_symposium">Brief Content of the symposium</string>
+    <string name="register">Register</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_nav_drawefor_student">Welcome!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchview">Search</string>
+    <string name="select">Select</string>
+
+</resources>

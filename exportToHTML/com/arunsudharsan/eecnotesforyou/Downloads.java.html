@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>Downloads.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Downloads.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.arunsudharsan.eecnotesforyou; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.app.ListActivity; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.content.Intent; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.net.Uri; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android.os.Environment; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android.support.v7.widget.CardView; 
+<a name="l9"><span class="ln">9    </span></a></span><span class="s0">import </span><span class="s1">android.util.Log; 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">import </span><span class="s1">android.view.View; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ArrayAdapter; 
+<a name="l12"><span class="ln">12   </span></a></span><span class="s0">import </span><span class="s1">android.widget.Button; 
+<a name="l13"><span class="ln">13   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ListView; 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a></span><span class="s0">import </span><span class="s1">java.io.File; 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s0">import </span><span class="s1">java.util.ArrayList; 
+<a name="l17"><span class="ln">17   </span></a></span><span class="s0">import </span><span class="s1">java.util.Collections; 
+<a name="l18"><span class="ln">18   </span></a></span><span class="s0">import </span><span class="s1">java.util.List; 
+<a name="l19"><span class="ln">19   </span></a> 
+<a name="l20"><span class="ln">20   </span></a></span><span class="s0">public class </span><span class="s1">Downloads </span><span class="s0">extends </span><span class="s1">ListActivity { 
+<a name="l21"><span class="ln">21   </span></a> 
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s0">private </span><span class="s1">String path; 
+<a name="l23"><span class="ln">23   </span></a> 
+<a name="l24"><span class="ln">24   </span></a>    </span><span class="s0">private </span><span class="s1">Button btn_gotodashfromoff, continuereading; 
+<a name="l25"><span class="ln">25   </span></a>    CardView cv_nosave; 
+<a name="l26"><span class="ln">26   </span></a> 
+<a name="l27"><span class="ln">27   </span></a>    @Override 
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+<a name="l29"><span class="ln">29   </span></a>        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+<a name="l30"><span class="ln">30   </span></a>        setContentView(R.layout.activity_downloads); 
+<a name="l31"><span class="ln">31   </span></a>        path = Environment.getExternalStorageDirectory().getAbsolutePath() + </span><span class="s2">&quot;/storage/emulated/0/EEC NOTES/&quot;</span><span class="s1">; 
+<a name="l32"><span class="ln">32   </span></a>        cv_nosave = (CardView) findViewById(R.id.cardnosaved); 
+<a name="l33"><span class="ln">33   </span></a>        cv_nosave.setVisibility(View.GONE); 
+<a name="l34"><span class="ln">34   </span></a>        btn_gotodashfromoff=(Button)findViewById(R.id.backtodashfromoff); 
+<a name="l35"><span class="ln">35   </span></a>btn_gotodashfromoff.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l36"><span class="ln">36   </span></a>    @Override 
+<a name="l37"><span class="ln">37   </span></a>    </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l38"><span class="ln">38   </span></a>        Intent intent = </span><span class="s0">new </span><span class="s1">Intent(getBaseContext(), <a href="Dashboard.java.html">Dashboard</a>.</span><span class="s0">class</span><span class="s1">); 
+<a name="l39"><span class="ln">39   </span></a>        finish(); 
+<a name="l40"><span class="ln">40   </span></a>        startActivity(intent); 
+<a name="l41"><span class="ln">41   </span></a>    } 
+<a name="l42"><span class="ln">42   </span></a>}); 
+<a name="l43"><span class="ln">43   </span></a>        continuereading = (Button) findViewById(R.id.continuereading); 
+<a name="l44"><span class="ln">44   </span></a>        continuereading.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l45"><span class="ln">45   </span></a>            @Override 
+<a name="l46"><span class="ln">46   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l47"><span class="ln">47   </span></a>                Intent intent = </span><span class="s0">new </span><span class="s1">Intent(getBaseContext(), <a href="Dashboard.java.html">Dashboard</a>.</span><span class="s0">class</span><span class="s1">); 
+<a name="l48"><span class="ln">48   </span></a>                finish(); 
+<a name="l49"><span class="ln">49   </span></a>                startActivity(intent); 
+<a name="l50"><span class="ln">50   </span></a> 
+<a name="l51"><span class="ln">51   </span></a>            } 
+<a name="l52"><span class="ln">52   </span></a>        }); 
+<a name="l53"><span class="ln">53   </span></a> 
+<a name="l54"><span class="ln">54   </span></a>        </span><span class="s0">if </span><span class="s1">(getIntent().hasExtra(</span><span class="s2">&quot;path&quot;</span><span class="s1">)) { 
+<a name="l55"><span class="ln">55   </span></a>            path = getIntent().getStringExtra(</span><span class="s2">&quot;path&quot;</span><span class="s1">); 
+<a name="l56"><span class="ln">56   </span></a>        } 
+<a name="l57"><span class="ln">57   </span></a> 
+<a name="l58"><span class="ln">58   </span></a>        </span><span class="s3">//setTitle(&quot;Saved&quot;);</span><span class="s1"> 
+<a name="l59"><span class="ln">59   </span></a> 
+<a name="l60"><span class="ln">60   </span></a>        </span><span class="s3">// Read all files sorted into the values-array</span><span class="s1"> 
+<a name="l61"><span class="ln">61   </span></a>        List values = </span><span class="s0">new </span><span class="s1">ArrayList(); 
+<a name="l62"><span class="ln">62   </span></a>        File dir = </span><span class="s0">new </span><span class="s1">File(path); 
+<a name="l63"><span class="ln">63   </span></a>        </span><span class="s0">if </span><span class="s1">(!dir.canRead()) { 
+<a name="l64"><span class="ln">64   </span></a>continuereading.setVisibility(View.GONE); 
+<a name="l65"><span class="ln">65   </span></a>           btn_gotodashfromoff.setVisibility(View.GONE); 
+<a name="l66"><span class="ln">66   </span></a>            cv_nosave.setVisibility(View.VISIBLE); 
+<a name="l67"><span class="ln">67   </span></a>        } 
+<a name="l68"><span class="ln">68   </span></a>        String[] list = dir.list(); 
+<a name="l69"><span class="ln">69   </span></a>        </span><span class="s0">if </span><span class="s1">(list != </span><span class="s0">null</span><span class="s1">) { 
+<a name="l70"><span class="ln">70   </span></a>            </span><span class="s0">for </span><span class="s1">(String file : list) { 
+<a name="l71"><span class="ln">71   </span></a>                </span><span class="s0">if </span><span class="s1">(!file.startsWith(</span><span class="s2">&quot;.&quot;</span><span class="s1">)) { 
+<a name="l72"><span class="ln">72   </span></a>                    values.add(file); 
+<a name="l73"><span class="ln">73   </span></a>                } 
+<a name="l74"><span class="ln">74   </span></a>            } 
+<a name="l75"><span class="ln">75   </span></a>        } 
+<a name="l76"><span class="ln">76   </span></a>        Collections.sort(values); 
+<a name="l77"><span class="ln">77   </span></a> 
+<a name="l78"><span class="ln">78   </span></a>        </span><span class="s3">// Put the data into the list</span><span class="s1"> 
+<a name="l79"><span class="ln">79   </span></a>        ArrayAdapter adapter = </span><span class="s0">new </span><span class="s1">ArrayAdapter(</span><span class="s0">this</span><span class="s1">, R.layout.mytextviewlist, android.R.id.text1, values); 
+<a name="l80"><span class="ln">80   </span></a>        setListAdapter(adapter); 
+<a name="l81"><span class="ln">81   </span></a>    } 
+<a name="l82"><span class="ln">82   </span></a> 
+<a name="l83"><span class="ln">83   </span></a>    @Override 
+<a name="l84"><span class="ln">84   </span></a>    </span><span class="s0">protected void </span><span class="s1">onListItemClick(ListView l, View v, </span><span class="s0">int </span><span class="s1">position, </span><span class="s0">long </span><span class="s1">id) { 
+<a name="l85"><span class="ln">85   </span></a>        String filename = (String) getListAdapter().getItem(position); 
+<a name="l86"><span class="ln">86   </span></a>        </span><span class="s0">if </span><span class="s1">(path.endsWith(File.separator)) { 
+<a name="l87"><span class="ln">87   </span></a>            filename = path + filename; 
+<a name="l88"><span class="ln">88   </span></a>        } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l89"><span class="ln">89   </span></a>            filename = path + File.separator + filename; 
+<a name="l90"><span class="ln">90   </span></a>        } 
+<a name="l91"><span class="ln">91   </span></a>        </span><span class="s0">if </span><span class="s1">(</span><span class="s0">new </span><span class="s1">File(filename).isDirectory()) { 
+<a name="l92"><span class="ln">92   </span></a>            Intent intent = </span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s1">, Downloads.</span><span class="s0">class</span><span class="s1">); 
+<a name="l93"><span class="ln">93   </span></a>            intent.putExtra(</span><span class="s2">&quot;path&quot;</span><span class="s1">, filename); 
+<a name="l94"><span class="ln">94   </span></a>            startActivity(intent); 
+<a name="l95"><span class="ln">95   </span></a>        } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l96"><span class="ln">96   </span></a>            File file = </span><span class="s0">new </span><span class="s1">File(filename); 
+<a name="l97"><span class="ln">97   </span></a>            Intent intent = </span><span class="s0">new </span><span class="s1">Intent(Intent.ACTION_VIEW); 
+<a name="l98"><span class="ln">98   </span></a>            intent.setDataAndType(Uri.fromFile(file), </span><span class="s2">&quot;application/pdf&quot;</span><span class="s1">); 
+<a name="l99"><span class="ln">99   </span></a>            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY); 
+<a name="l100"><span class="ln">100  </span></a>            startActivity(intent); 
+<a name="l101"><span class="ln">101  </span></a>          </span><span class="s3">//  Toast.makeText(this, filename + &quot; is not a directory&quot;, Toast.LENGTH_LONG).show();</span><span class="s1"> 
+<a name="l102"><span class="ln">102  </span></a>        } 
+<a name="l103"><span class="ln">103  </span></a>    } 
+<a name="l104"><span class="ln">104  </span></a> 
+<a name="l105"><span class="ln">105  </span></a>} 
+<a name="l106"><span class="ln">106  </span></a> 
+<a name="l107"><span class="ln">107  </span></a></span><span class="s3">/*        path = Environment.getExternalStorageDirectory().getAbsolutePath() + &quot;/storage/emulated/0/EEC NOTES/&quot;; 
+<a name="l108"><span class="ln">108  </span></a> 
+<a name="l109"><span class="ln">109  </span></a>        cv_nosave = (CardView) findViewById(R.id.cardnosaved); 
+<a name="l110"><span class="ln">110  </span></a>        cv_nosave.setVisibility(View.INVISIBLE); 
+<a name="l111"><span class="ln">111  </span></a>        folderarrayAdapter = new ArrayAdapter&lt;String&gt;(this, R.layout.mytextviewlist, FolderList); 
+<a name="l112"><span class="ln">112  </span></a>        flistView = (ListView) findViewById(R.id.fileslist); 
+<a name="l113"><span class="ln">113  </span></a>        flistView.setAdapter(folderarrayAdapter); 
+<a name="l114"><span class="ln">114  </span></a>        flistView.setVisibility(View.VISIBLE); 
+<a name="l115"><span class="ln">115  </span></a> 
+<a name="l116"><span class="ln">116  </span></a>        continuerading = (Button) findViewById(R.id.continuereading); 
+<a name="l117"><span class="ln">117  </span></a>        continuerading.setOnClickListener(new View.OnClickListener() { 
+<a name="l118"><span class="ln">118  </span></a>            @Override 
+<a name="l119"><span class="ln">119  </span></a>            public void onClick(View v) { 
+<a name="l120"><span class="ln">120  </span></a>                Intent intent = new Intent(getBaseContext(), Dashboard.class); 
+<a name="l121"><span class="ln">121  </span></a>                finish(); 
+<a name="l122"><span class="ln">122  </span></a>                startActivity(intent); 
+<a name="l123"><span class="ln">123  </span></a> 
+<a name="l124"><span class="ln">124  </span></a>            } 
+<a name="l125"><span class="ln">125  </span></a>        }); 
+<a name="l126"><span class="ln">126  </span></a> 
+<a name="l127"><span class="ln">127  </span></a> 
+<a name="l128"><span class="ln">128  </span></a>        File f = new File(path); 
+<a name="l129"><span class="ln">129  </span></a>        File file[] = f.listFiles(); 
+<a name="l130"><span class="ln">130  </span></a> 
+<a name="l131"><span class="ln">131  </span></a>//displaying no files... 
+<a name="l132"><span class="ln">132  </span></a>        if (file.length == 0) { 
+<a name="l133"><span class="ln">133  </span></a>            flistView.setVisibility(View.GONE); 
+<a name="l134"><span class="ln">134  </span></a>            cv_nosave.setVisibility(View.VISIBLE); 
+<a name="l135"><span class="ln">135  </span></a> 
+<a name="l136"><span class="ln">136  </span></a>        } 
+<a name="l137"><span class="ln">137  </span></a> 
+<a name="l138"><span class="ln">138  </span></a>        for (int i = 0; i &lt; file.length; i++) { 
+<a name="l139"><span class="ln">139  </span></a>            FolderList.add(file[i].getName()); 
+<a name="l140"><span class="ln">140  </span></a>            folderarrayAdapter.notifyDataSetChanged(); 
+<a name="l141"><span class="ln">141  </span></a> 
+<a name="l142"><span class="ln">142  </span></a>        } 
+<a name="l143"><span class="ln">143  </span></a> 
+<a name="l144"><span class="ln">144  </span></a>        flistView.setOnItemClickListener(new AdapterView.OnItemClickListener() { 
+<a name="l145"><span class="ln">145  </span></a>            @Override 
+<a name="l146"><span class="ln">146  </span></a>            public void onItemClick(AdapterView&lt;?&gt; parent, View view, int i, long id) { 
+<a name="l147"><span class="ln">147  </span></a> 
+<a name="l148"><span class="ln">148  </span></a> 
+<a name="l149"><span class="ln">149  </span></a>                path=path+&quot;/&quot;+FolderList.get(i); 
+<a name="l150"><span class="ln">150  </span></a>                FolderList.clear(); 
+<a name="l151"><span class="ln">151  </span></a>                File f = new File(path); 
+<a name="l152"><span class="ln">152  </span></a>                File file[] = f.listFiles(); 
+<a name="l153"><span class="ln">153  </span></a> 
+<a name="l154"><span class="ln">154  </span></a>                if (file.length == 0) { 
+<a name="l155"><span class="ln">155  </span></a>                    Toast.makeText(Downloads.this, &quot;Empty&quot;, Toast.LENGTH_LONG).show(); 
+<a name="l156"><span class="ln">156  </span></a> 
+<a name="l157"><span class="ln">157  </span></a>                } 
+<a name="l158"><span class="ln">158  </span></a> 
+<a name="l159"><span class="ln">159  </span></a> 
+<a name="l160"><span class="ln">160  </span></a>                for (int j = 0; j &lt; file.length; j++) { 
+<a name="l161"><span class="ln">161  </span></a>                    FolderList.add(file[j].getName()); 
+<a name="l162"><span class="ln">162  </span></a>                    folderarrayAdapter.notifyDataSetChanged(); 
+<a name="l163"><span class="ln">163  </span></a> 
+<a name="l164"><span class="ln">164  </span></a>                } 
+<a name="l165"><span class="ln">165  </span></a>                // Toast.makeText(Downloads.this, &quot;&quot; + FolderList.get(i), Toast.LENGTH_LONG).show(); 
+<a name="l166"><span class="ln">166  </span></a> 
+<a name="l167"><span class="ln">167  </span></a>            } 
+<a name="l168"><span class="ln">168  </span></a>        }); 
+<a name="l169"><span class="ln">169  </span></a> 
+<a name="l170"><span class="ln">170  </span></a>    } 
+<a name="l171"><span class="ln">171  </span></a> 
+<a name="l172"><span class="ln">172  </span></a> 
+<a name="l173"><span class="ln">173  </span></a>} 
+<a name="l174"><span class="ln">174  </span></a>*/</span><span class="s1"> 
+<a name="l175"><span class="ln">175  </span></a></span></pre>
+</body>
+</html>

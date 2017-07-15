@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+
+    android:orientation="vertical"
+    tools:context="com.arunsudharsan.eecnotesforyou.Downloads">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Saved PDF"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:typeface="normal" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="OFFLINE"
+
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardnosaved"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:visibility="gone"
+
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/youhaventsaved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/you_haven_t_saved_anything_yet"
+                android:textColor="@color/bg_screen1"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tapdownload"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/youhaventsaved"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="@string/tap_the_download_button_to_save_pdf_and_read_them_later"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#212121"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/continuereading"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tapdownload"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="34dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Continue Reading" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:id="@+id/cardviewforlist"
+        card_view:cardCornerRadius="2dp"
+
+        card_view:contentPadding="10dp">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:listSelector="@drawable/listcolorselector"
+            android:scrollbarSize="3.5dip"
+            android:scrollbarThumbVertical="@drawable/scrollbar" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/backtodashfromoff"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Continue Reading" />
+
+</LinearLayout>

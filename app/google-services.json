@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "453584345352",
+    "firebase_url": "https://notes-for-you-6b222.firebaseio.com",
+    "project_id": "notes-for-you-6b222",
+    "storage_bucket": "notes-for-you-6b222.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453584345352:android:72d1b15affb184c5",
+        "android_client_info": {
+          "package_name": "com.arunsudharsan.eecnotesforyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453584345352-fsn99gt1uf6nghkrsc9k3g3cr2fflsg5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arunsudharsan.eecnotesforyou",
+            "certificate_hash": "b0aa462a7b8e8c914dc7c6f66ec0bca89269d54a"
+          }
+        },
+        {
+          "client_id": "453584345352-hmoi7aaibdre3q3jrha207rleccvjamj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arunsudharsan.eecnotesforyou",
+            "certificate_hash": "1b7b9d304d4bb7d05e294f4c26865204e305dd39"
+          }
+        },
+        {
+          "client_id": "453584345352-ai01j0lupc079mc0jg5rn59dh9q6hloe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arunsudharsan.eecnotesforyou",
+            "certificate_hash": "7cfd52208f5f11bba1d99e71920f067447112838"
+          }
+        },
+        {
+          "client_id": "453584345352-ickd5pginh2ruvkg7fe64tfl9l2dafeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCadNlyv8hfsCqc9J1oxVzdbU-qd3KRLdc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453584345352-ickd5pginh2ruvkg7fe64tfl9l2dafeo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
